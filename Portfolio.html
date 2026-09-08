@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OSSCS — Om Shree Sai Compliance Solution | Factory Compliance & Audit Consultancy</title>
+<meta name="description" content="Factory establishment, licensing, statutory returns, certification and audit consultancy (SEDEX, BSCI, SA8000, C-TPAT, FSC, BRCGS, ISO) for manufacturing, handicraft, marble, textile, steel and food packaging units — Mohit Shrimali, Founder, OSSCS.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800&family=Work+Sans:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    corePlugins: { preflight: false },
+    theme: { extend: { colors: { brass:'#b8863d', 'brass-light':'#d9ad6c', deep:'#16261f', 'deep-2':'#0f1b16', teal:'#33534a', seal:'#7d3634' } } }
+  }
+</script>
+
+<style>
+  :root{
+    --ink:#1b1e1a; --paper:#efece1; --paper-2:#e6e2d3; --deep:#16261f; --deep-2:#0f1b16;
+    --brass:#b8863d; --brass-light:#d9ad6c; --seal:#7d3634; --teal:#33534a;
+    --line: rgba(27,30,26,0.14); --line-light: rgba(239,236,225,0.18);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{ margin:0; background:var(--paper); color:var(--ink); font-family:'Work Sans', sans-serif; line-height:1.6; -webkit-font-smoothing:antialiased; overflow-x:hidden; }
+  h1,h2,h3,h4{ font-family:'Fraunces', serif; font-weight:600; color:var(--deep); line-height:1.15; }
+  a{ color:inherit; text-decoration:none; }
+  ::selection{ background:var(--brass); color:#fff; }
+
+  .grad-text{
+    background:linear-gradient(100deg,#d9ad6c 0%, #b8863d 45%, #efc98a 75%, #b8863d 100%);
+    background-size:250% auto; -webkit-background-clip:text; background-clip:text; -webkit-text-fill-color:transparent;
+    animation:gradShift 6s ease-in-out infinite;
+  }
+  @keyframes gradShift{ 0%{background-position:0% 50%;} 50%{background-position:100% 50%;} 100%{background-position:0% 50%;} }
+
+  .btn-brass{ background:linear-gradient(120deg,#b8863d,#d9ad6c,#b8863d); background-size:220% auto; color:#0f1b16!important; border:none; font-weight:700; transition:background-position .5s ease, transform .2s ease; box-shadow:0 8px 24px -8px rgba(184,134,61,.55); }
+  .btn-brass:hover{ background-position:right center; transform:translateY(-2px); color:#0f1b16; }
+  .btn-outline-paper{ border:1px solid rgba(239,236,225,.45); color:var(--paper); background:transparent; }
+  .btn-outline-paper:hover{ border-color:var(--brass-light); color:var(--brass-light); background:rgba(217,173,108,.08); }
+
+  .link-shine{ position:relative; display:inline-block; }
+  .link-shine::after{ content:""; position:absolute; left:0; bottom:-3px; width:100%; height:2px; background:linear-gradient(90deg, transparent, var(--brass-light), var(--brass), transparent); background-size:200% auto; background-position:0% 0; opacity:0; transition:opacity .25s ease; }
+  .link-shine:hover::after{ opacity:1; animation:slideShine 1.1s linear infinite; }
+  @keyframes slideShine{ 0%{background-position:0% 0;} 100%{background-position:-200% 0;} }
+
+  .glass-nav{ background:rgba(15,27,22,0.88); backdrop-filter:blur(10px); }
+
+  .hero-bg{
+    background:
+      radial-gradient(ellipse 700px 400px at 15% -10%, rgba(184,134,61,0.22), transparent 60%),
+      radial-gradient(ellipse 600px 500px at 100% 20%, rgba(51,83,74,0.28), transparent 55%),
+      linear-gradient(135deg,#0f1b16, #16261f 55%, #12201a);
+    background-size:200% 200%; animation:bgFloat 14s ease-in-out infinite;
+  }
+  @keyframes bgFloat{ 0%{background-position:0% 0%;} 50%{background-position:60% 40%;} 100%{background-position:0% 0%;} }
+
+  .seal-ring{ animation:spin 26s linear infinite; transform-origin:center; }
+  @keyframes spin{ to{ transform:rotate(360deg);} }
+  .float-slow{ animation:floaty 5s ease-in-out infinite; }
+  @keyframes floaty{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(-8px);} }
+
+  .section-pad{ padding:96px 0; }
+  @media (max-width:768px){ .section-pad{ padding:64px 0; } }
+  .eyebrow{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--teal); letter-spacing:.05em; }
+  .divider-brass{ height:3px; width:64px; background:linear-gradient(90deg,var(--brass),var(--brass-light)); border-radius:4px; }
+
+  .card-hover{ transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease; }
+  .card-hover:hover{ transform:translateY(-6px); box-shadow:0 20px 40px -20px rgba(22,38,31,.35); border-color:var(--brass)!important; }
+
+  .stat-card b{ font-family:'Fraunces',serif; font-size:32px; color:var(--deep); display:block; }
+  .service-num{ font-family:'Fraunces',serif; font-size:30px; color:var(--brass); font-weight:700; }
+  .tag-pill{ font-family:'IBM Plex Mono', monospace; font-size:11.5px; color:var(--teal); background:rgba(51,83,74,0.08); border:1px solid rgba(51,83,74,0.25); padding:4px 10px; border-radius:20px; display:inline-flex; align-items:center; gap:5px; }
+
+  .gallery-card{ background:#fff; border:1px solid var(--line); border-radius:12px; padding:22px 14px; height:100%; display:flex; flex-direction:column; align-items:center; justify-content:center; cursor:pointer; transition:transform .2s ease, box-shadow .2s ease; }
+  .gallery-card:hover{ transform:translateY(-4px); box-shadow:0 16px 30px -18px rgba(22,38,31,.4); }
+  .gallery-card img{ max-height:76px; object-fit:contain; margin-bottom:12px; }
+  .gallery-card span{ font-family:'IBM Plex Mono', monospace; font-size:12px; color:var(--deep); text-align:center; }
+
+  .navbar-brand-mark{ width:42px;height:42px;border-radius:50%; border:1.5px solid var(--brass); display:flex;align-items:center;justify-content:center; font-family:'Fraunces',serif; font-weight:700; color:var(--brass-light); font-size:15px; flex:none; }
+
+  .offcanvas-dark{ background:var(--deep); color:var(--paper); }
+  .offcanvas-dark .nav-link{ color:var(--paper); font-size:17px; padding:14px 4px; border-bottom:1px solid var(--line-light); }
+  .offcanvas-dark .nav-link:hover{ color:var(--brass-light); }
+
+  .carousel-control-prev-icon,.carousel-control-next-icon{ filter:invert(1) grayscale(1); background-color:rgba(22,38,31,.55); border-radius:50%; padding:14px; }
+  .carousel-indicators [data-bs-target]{ background-color:var(--brass); }
+
+  footer{ background:var(--deep-2); color:#9a9c92; }
+</style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg glass-nav sticky-top py-3" style="border-bottom:1px solid var(--line-light);">
+  <div class="container">
+    <a class="navbar-brand d-flex align-items-center gap-2" href="#home">
+      <span class="navbar-brand-mark">OS</span>
+      <span class="d-flex flex-column lh-sm">
+        <strong class="text-white" style="font-family:'Fraunces',serif;letter-spacing:.02em;">OSSCS</strong>
+        <span style="font-size:10px;color:var(--brass-light);letter-spacing:.06em;">OM SHREE SAI COMPLIANCE SOLUTION</span>
+      </span>
+    </a>
+    <button class="btn btn-outline-paper d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideNav" aria-controls="sideNav">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+    <div class="d-none d-lg-flex align-items-center gap-4">
+      <a href="#home" class="text-white link-shine">Home</a>
+      <a href="#about" class="text-white link-shine">About Us</a>
+      <a href="#skills" class="text-white link-shine">Skills</a>
+      <a href="#services" class="text-white link-shine">Services</a>
+      <a href="#experience" class="text-white link-shine">Experience</a>
+      <a href="#projects" class="text-white link-shine">Projects</a>
+      <a href="#contact" class="btn btn-brass rounded-1 px-4">Contact Us</a>
+    </div>
+  </div>
+</nav>
+
+<div class="offcanvas offcanvas-end offcanvas-dark" tabindex="-1" id="sideNav">
+  <div class="offcanvas-header">
+    <h5 class="text-white m-0" style="font-family:'Fraunces',serif;">OSSCS</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <nav class="nav flex-column">
+      <a class="nav-link" data-bs-dismiss="offcanvas" href="#home">Home</a>
+      <a class="nav-link" data-bs-dismiss="offcanvas" href="#about">About Us</a>
+      <a class="nav-link" data-bs-dismiss="offcanvas" href="#skills">Skills</a>
+      <a class="nav-link" data-bs-dismiss="offcanvas" href="#services">Services</a>
+      <a class="nav-link" data-bs-dismiss="offcanvas" href="#experience">Experience</a>
+      <a class="nav-link" data-bs-dismiss="offcanvas" href="#projects">Projects</a>
+      <a class="btn btn-brass mt-4 w-100" data-bs-dismiss="offcanvas" href="#contact">Contact Us</a>
+    </nav>
+  </div>
+</div>
+
+<header id="home" class="hero-bg text-white" style="border-bottom:3px solid var(--brass);">
+  <div class="container section-pad">
+    <div class="row align-items-center gy-5">
+      <div class="col-lg-7" data-aos="fade-right" data-aos-duration="800">
+        <span class="d-inline-block mb-4 px-3 py-2 rounded-pill" style="border:1px solid rgba(217,173,108,.35); color:var(--brass-light); font-size:14px;">॥ ॐ श्रीं गणेशाय नमः ॥</span>
+        <h1 class="display-5 fw-bold mb-3 text-white" style="max-width:15ch;">Keeping your factory <span class="grad-text">compliant</span>, licensed, and audit-ready.</h1>
+        <p class="fs-5 mb-4" style="color:#cfd0c6; max-width:48ch;">Independent consultancy for factory establishment, statutory licensing, government liaison and buyer/social audits — across handicraft, marble, textile, steel, food packaging and general manufacturing units in Rajasthan.</p>
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a href="#contact" class="btn btn-brass px-4 py-3 rounded-1">Get a compliance review</a>
+          <a href="#services" class="btn btn-outline-paper px-4 py-3 rounded-1">View services</a>
+        </div>
+        <div class="d-inline-flex align-items-center gap-3 px-3 py-2 rounded-pill" style="background:rgba(239,236,225,0.05); border:1px solid var(--line-light);">
+          <span class="rounded-circle d-flex align-items-center justify-content-center fw-bold" style="width:40px;height:40px;background:var(--brass);color:var(--deep-2);font-family:'Fraunces',serif;">MS</span>
+          <span class="lh-sm">
+            <span class="d-block fw-semibold text-white" style="font-size:14px;">Mohit Shrimali</span>
+            <span class="d-block" style="font-size:11px;color:var(--brass-light);letter-spacing:.05em;">FOUNDER &amp; COMPLIANCE CONSULTANT</span>
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-5 text-center" data-aos="zoom-in" data-aos-delay="150">
+        <div class="float-slow mx-auto" style="width:240px;">
+          <svg viewBox="0 0 220 220" class="w-100">
+            <defs><path id="circlePath" d="M 110,110 m -85,0 a 85,85 0 1,1 170,0 a 85,85 0 1,1 -170,0" /></defs>
+            <g class="seal-ring"><circle cx="110" cy="110" r="98" fill="none" stroke="#b8863d" stroke-width="1" opacity="0.45"/>
+              <text style="font-family:'IBM Plex Mono',monospace;font-size:10.4px;letter-spacing:.15em;fill:#d9ad6c;">
+                <textPath href="#circlePath" startOffset="2%">COMPLIANCE · LICENSING · AUDIT · CERTIFICATION ·</textPath>
+              </text>
+            </g>
+            <circle cx="110" cy="110" r="68" fill="#0f1b16" stroke="#b8863d" stroke-width="1.5"/>
+            <text x="110" y="103" text-anchor="middle" font-size="15" fill="#efece1" font-family="Fraunces,serif" font-weight="600">OSSCS</text>
+            <text x="110" y="122" text-anchor="middle" font-size="9" fill="#d9ad6c" font-family="Fraunces,serif">FACTORY · AUDIT · LICENSE</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about" class="section-pad">
+  <div class="container">
+    <div class="row gy-5">
+      <div class="col-lg-5" data-aos="fade-up">
+        <span class="eyebrow">About</span>
+        <h2 class="display-6 mt-2">15+ years inside the factory compliance system.</h2>
+        <div class="divider-brass mt-3"></div>
+      </div>
+      <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+        <p class="fs-6" style="color:#3a3c35;">Mohit Shrimali has spent over fifteen years working inside factory establishment, licensing and audit processes — building the policies, registers and paperwork that Factory Act and government norms actually require, rather than just advising on paper.</p>
+        <p class="fs-6" style="color:#3a3c35;">OSSCS runs full-time and part-time consultancy engagements across handicraft exporters, marble processing, food packaging, steel manufacturing, textile and other general manufacturing units — helping them stand up compliance systems from scratch, keep statutory filings current, and pass buyer and third-party audits on schedule.</p>
+        <div class="row row-cols-2 g-4 mt-2">
+          <div class="col"><div class="stat-card border-start border-3 ps-3" style="border-color:var(--brass)!important;"><b>15+</b><span style="font-size:13px;color:#5a5c53;">Years in factory compliance</span></div></div>
+          <div class="col"><div class="stat-card border-start border-3 ps-3" style="border-color:var(--brass)!important;"><b>6+</b><span style="font-size:13px;color:#5a5c53;">Industries served</span></div></div>
+          <div class="col"><div class="stat-card border-start border-3 ps-3" style="border-color:var(--brass)!important;"><b>5</b><span style="font-size:13px;color:#5a5c53;">Core service areas</span></div></div>
+          <div class="col"><div class="stat-card border-start border-3 ps-3" style="border-color:var(--brass)!important;"><b>12+</b><span style="font-size:13px;color:#5a5c53;">Audit &amp; certification standards</span></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section-pad" style="background:var(--paper-2);">
+  <div class="container">
+    <div class="mb-5" data-aos="fade-up" style="max-width:640px;">
+      <span class="eyebrow">Skills</span>
+      <h2 class="display-6 mt-2">What the work draws on</h2>
+      <div class="divider-brass mt-3 mb-3"></div>
+      <p style="color:#4b4d46;">A working knowledge of the regulations, plus the people skills to get a factory floor and a government office to agree.</p>
+    </div>
+    <div class="row g-4">
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0"><div class="card-hover bg-white border rounded-3 p-4 h-100" style="border-color:var(--line)!important;"><i class="fa-solid fa-scale-balanced fa-lg mb-3" style="color:var(--brass);"></i><h4 class="fs-6 fw-bold">Factory Act &amp; Labour Law</h4><p class="small mb-0" style="color:#4b4d46;">Establishment of new and old factories, and ongoing statutory compliance under the Factory Act.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80"><div class="card-hover bg-white border rounded-3 p-4 h-100" style="border-color:var(--line)!important;"><i class="fa-solid fa-file-invoice-dollar fa-lg mb-3" style="color:var(--brass);"></i><h4 class="fs-6 fw-bold">PF &amp; ESI administration</h4><p class="small mb-0" style="color:#4b4d46;">Setup and month-to-month management of EPF and ESIC obligations and challans.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160"><div class="card-hover bg-white border rounded-3 p-4 h-100" style="border-color:var(--line)!important;"><i class="fa-solid fa-building-shield fa-lg mb-3" style="color:var(--brass);"></i><h4 class="fs-6 fw-bold">Licensing &amp; government liaison</h4><p class="small mb-0" style="color:#4b4d46;">Factory layout maps, RSPCB clearances and Fire NOC coordination with the relevant departments.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="0"><div class="card-hover bg-white border rounded-3 p-4 h-100" style="border-color:var(--line)!important;"><i class="fa-solid fa-clipboard-check fa-lg mb-3" style="color:var(--brass);"></i><h4 class="fs-6 fw-bold">Audit readiness</h4><p class="small mb-0" style="color:#4b4d46;">Preparing units for social, technical, quality and security audits against buyer requirements.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="80"><div class="card-hover bg-white border rounded-3 p-4 h-100" style="border-color:var(--line)!important;"><i class="fa-solid fa-sack-dollar fa-lg mb-3" style="color:var(--brass);"></i><h4 class="fs-6 fw-bold">Payroll &amp; statutory returns</h4><p class="small mb-0" style="color:#4b4d46;">Monthly, half-yearly and annual return filing kept on the government's own timeline.</p></div></div>
+      <div class="col-md-4" data-aos="fade-up" data-aos-delay="160"><div class="card-hover bg-white border rounded-3 p-4 h-100" style="border-color:var(--line)!important;"><i class="fa-solid fa-people-group fa-lg mb-3" style="color:var(--brass);"></i><h4 class="fs-6 fw-bold">Recruitment &amp; people management</h4><p class="small mb-0" style="color:#4b4d46;">Staffing for white-collar and blue-collar roles, including contractor compliance.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="section-pad">
+  <div class="container">
+    <div class="mb-5" data-aos="fade-up" style="max-width:640px;">
+      <span class="eyebrow">Services</span>
+      <h2 class="display-6 mt-2">Five areas of work, start to finish</h2>
+      <div class="divider-brass mt-3 mb-3"></div>
+      <p style="color:#4b4d46;">The same five clauses used in every OSSCS engagement proposal — establishment through to audit.</p>
+    </div>
+
+    <div class="row py-4 border-top" style="border-color:var(--line)!important;" data-aos="fade-up">
+      <div class="col-2 col-md-1"><span class="service-num">I</span></div>
+      <div class="col-10 col-md-11">
+        <h3 class="fs-5 fw-bold">Establishment &amp; signage / marking</h3>
+        <p style="color:#3a3c35;max-width:70ch;">Establishment of new and old factories to compliance and audit norms, including the policies and procedures the Factory Act and other government norms require. Covers all industry signage work, including yellow and zebra floor marking.</p>
+      </div>
+    </div>
+
+    <div class="row py-4 border-top" style="border-color:var(--line)!important;" data-aos="fade-up">
+      <div class="col-2 col-md-1"><span class="service-num">II</span></div>
+      <div class="col-10 col-md-11">
+        <h3 class="fs-5 fw-bold">Returns — monthly, half-yearly, annual</h3>
+        <p style="color:#3a3c35;max-width:70ch;">Preparation and filing of monthly PF &amp; ESI challans and payroll, plus every return submission on the government's required schedule.</p>
+      </div>
+    </div>
+
+    <div class="row py-4 border-top" style="border-color:var(--line)!important;" data-aos="fade-up">
+      <div class="col-2 col-md-1"><span class="service-num">III</span></div>
+      <div class="col-10 col-md-11">
+        <h3 class="fs-5 fw-bold">Licence work</h3>
+        <p style="color:#3a3c35;max-width:70ch;">End-to-end licensing for new and old factories — map approval, factory licence, RSPCB clearances (CTE, CTO, authorisation, hazardous waste) and Fire NOC — handled within timeframe at minimum cost.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag-pill">Map Approval</span><span class="tag-pill">Factory Licence</span><span class="tag-pill">RSPCB CTE/CTO</span><span class="tag-pill">Hazardous Waste Auth.</span><span class="tag-pill">Fire NOC</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row py-4 border-top" style="border-color:var(--line)!important;" data-aos="fade-up">
+      <div class="col-2 col-md-1"><span class="service-num">IV</span></div>
+      <div class="col-10 col-md-11">
+        <h3 class="fs-5 fw-bold">Certification work</h3>
+        <p style="color:#3a3c35;max-width:70ch;">Certification required under the Factory Act — stability, compressor, pressure vessel, generator permission, LUX and water testing among them.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag-pill">Stability</span><span class="tag-pill">Compressor</span><span class="tag-pill">Pressure Vessel</span><span class="tag-pill">Generator Permission</span><span class="tag-pill">LUX Test</span><span class="tag-pill">Water Test</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="row py-4 border-top border-bottom" style="border-color:var(--line)!important;" data-aos="fade-up">
+      <div class="col-2 col-md-1"><span class="service-num">V</span></div>
+      <div class="col-10 col-md-11">
+        <h3 class="fs-5 fw-bold">Audits</h3>
+        <p style="color:#3a3c35;max-width:70ch;">Social, security, quality and technical audit preparation and management across the standards buyers actually ask for.</p>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="tag-pill">SEDEX</span><span class="tag-pill">BSCI</span><span class="tag-pill">SA8000</span><span class="tag-pill">C-TPAT</span>
+          <span class="tag-pill">FSC</span><span class="tag-pill">EUDR</span><span class="tag-pill">VRIKSH</span>
+          <span class="tag-pill">BRCGS</span><span class="tag-pill">HACCP</span><span class="tag-pill">FSSC 22000</span><span class="tag-pill">BRC</span>
+          <span class="tag-pill">ISO 9001</span><span class="tag-pill">ISO 14001</span><span class="tag-pill">ISO 45001</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience" class="section-pad text-white" style="background:var(--deep);">
+  <div class="container">
+    <div class="mb-5" data-aos="fade-up" style="max-width:640px;">
+      <span class="eyebrow" style="color:var(--brass-light);">Experience</span>
+      <h2 class="display-6 mt-2 text-white">Built on time actually spent in factories</h2>
+      <div class="divider-brass mt-3 mb-3"></div>
+      <p style="color:#c6c7bd;">Fifteen-plus years working the compliance side of manufacturing, most recently running OSSCS as an independent consultancy.</p>
+    </div>
+    <div class="row g-0 rounded-3 overflow-hidden" style="border:1px solid var(--line-light);" data-aos="zoom-in">
+      <div class="col-6 col-md-3 p-4 border-end" style="border-color:var(--line-light)!important;"><b class="d-block fs-3" style="font-family:'Fraunces',serif;color:var(--brass-light);">15+ yrs</b><span style="color:#c6c7bd;font-size:13px;">Factory compliance &amp; audit work</span></div>
+      <div class="col-6 col-md-3 p-4 border-end" style="border-color:var(--line-light)!important;"><b class="d-block fs-3" style="font-family:'Fraunces',serif;color:var(--brass-light);">Full-time</b><span style="color:#c6c7bd;font-size:13px;">&amp; part-time consultancy models</span></div>
+      <div class="col-6 col-md-3 p-4 border-end" style="border-color:var(--line-light)!important;"><b class="d-block fs-3" style="font-family:'Fraunces',serif;color:var(--brass-light);">Handicraft</b><span style="color:#c6c7bd;font-size:13px;">marble, textile &amp; export units</span></div>
+      <div class="col-6 col-md-3 p-4"><b class="d-block fs-3" style="font-family:'Fraunces',serif;color:var(--brass-light);">Manufacturing</b><span style="color:#c6c7bd;font-size:13px;">steel &amp; food packaging units</span></div>
+    </div>
+    <p class="mt-4" style="color:#c6c7bd;max-width:70ch;" data-aos="fade-up">The consultancy model is deliberately flexible — some units need a single license or audit pushed through on a deadline, others need an ongoing part-time compliance function. Both are run out of OSSCS, across handicraft, marble, food packaging, steel manufacturing, textile and general industrial units.</p>
+  </div>
+</section>
+
+<section id="projects" class="section-pad" style="background:var(--paper-2);">
+  <div class="container">
+    <div class="mb-5" data-aos="fade-up" style="max-width:640px;">
+      <span class="eyebrow">Projects</span>
+      <h2 class="display-6 mt-2">Standards &amp; frameworks handled</h2>
+      <div class="divider-brass mt-3 mb-3"></div>
+      <p style="color:#4b4d46;">The certification and audit systems most commonly worked on the ground. Tap any tile for a quick note.</p>
+    </div>
+
+    <div id="stdCarousel" class="carousel slide" data-bs-ride="carousel" data-aos="fade-up">
+      <div class="carousel-indicators" style="bottom:-46px;">
+        <button type="button" data-bs-target="#stdCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#stdCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#stdCarousel" data-bs-slide-to="2"></button>
+        <button type="button" data-bs-target="#stdCarousel" data-bs-slide-to="3"></button>
+      </div>
+      <div class="carousel-inner pb-5">
+
+        <div class="carousel-item active">
+          <div class="row g-3">
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="SEDEX / SMETA" data-desc="Ethical trade audit covering labour, health & safety, environment and business ethics." data-img="assets/sedex.webp"><img src="assets/sedex.webp" alt="SEDEX logo"><span>SEDEX / SMETA</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="SA8000" data-desc="Social Accountability International's standard for decent working conditions." data-img="assets/sa8000.png"><img src="assets/sa8000.png" alt="SA8000 logo"><span>SA8000</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="ISO 45001" data-desc="Occupational health & safety management systems." data-img="assets/iso45001.jpg"><img src="assets/iso45001.jpg" alt="ISO 45001"><span>ISO 45001</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="C-TPAT" data-desc="Customs-Trade Partnership Against Terrorism — supply-chain security." data-img="assets/ctpat.jpg"><img src="assets/ctpat.jpg" alt="C-TPAT logo"><span>C-TPAT</span></div></div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="FSC" data-desc="Forest Stewardship Council — responsible, traceable timber and paper sourcing." data-img="assets/fsc.jpg"><img src="assets/fsc.jpg" alt="FSC logo"><span>FSC</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="EUDR" data-desc="EU Deforestation Regulation — proof that goods entering the EU are deforestation-free." data-img="assets/eudr.jpg"><img src="assets/eudr.jpg" alt="EUDR"><span>EUDR</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="PEFC" data-desc="Programme for the Endorsement of Forest Certification — sustainable forestry chain-of-custody." data-img="assets/pefc.png"><img src="assets/pefc.png" alt="PEFC logo"><span>PEFC</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="HACCP" data-desc="Hazard Analysis & Critical Control Points for food safety systems." data-img="assets/haccp.jpg"><img src="assets/haccp.jpg" alt="HACCP"><span>HACCP</span></div></div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3">
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="BRC Food" data-desc="Global food safety standard for packaging and food-contact manufacturers." data-img="assets/brcfood.png"><img src="assets/brcfood.png" alt="BRC Food logo"><span>BRC Food</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="FSSAI" data-desc="Food Safety and Standards Authority of India licensing for food businesses." data-img="assets/fssai.jpg"><img src="assets/fssai.jpg" alt="FSSAI logo"><span>FSSAI</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="ISO 9000" data-desc="Quality management system fundamentals and vocabulary." data-img="assets/iso9000.png"><img src="assets/iso9000.png" alt="ISO 9000 logo"><span>ISO 9000</span></div></div>
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="ISO 14000" data-desc="Environmental management system standards." data-img="assets/iso14000.jpg"><img src="assets/iso14000.jpg" alt="ISO 14000"><span>ISO 14000</span></div></div>
+          </div>
+        </div>
+
+        <div class="carousel-item">
+          <div class="row g-3 justify-content-center">
+            <div class="col-6 col-md-3"><div class="gallery-card" data-bs-toggle="modal" data-bs-target="#certModal" data-name="Audit Readiness" data-desc="Documentation, checklists, scope and controls prepared ahead of every buyer or third-party audit." data-img="assets/audit-process.webp"><img src="assets/audit-process.webp" alt="Audit process"><span>Audit Readiness</span></div></div>
+          </div>
+        </div>
+
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#stdCarousel" data-bs-slide="prev"><span class="carousel-control-prev-icon"></span></button>
+      <button class="carousel-control-next" type="button" data-bs-target="#stdCarousel" data-bs-slide="next"><span class="carousel-control-next-icon"></span></button>
+    </div>
+  </div>
+</section>
+
+<div class="modal fade" id="certModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content" style="border-radius:12px;">
+      <div class="modal-header" style="border-color:var(--line);">
+        <h5 class="modal-title" id="certModalName" style="font-family:'Fraunces',serif;"></h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="certModalImg" src="" alt="" style="max-height:120px;object-fit:contain;" class="mb-3">
+        <p id="certModalDesc" class="mb-0" style="color:#3a3c35;"></p>
+      </div>
+      <div class="modal-footer" style="border-color:var(--line);">
+        <a href="#contact" data-bs-dismiss="modal" class="btn btn-brass w-100 rounded-1">Ask about this standard</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section id="contact" class="section-pad" style="background:var(--paper-2);border-top:1px solid var(--line);">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-5" data-aos="fade-right">
+        <span class="eyebrow">Contact</span>
+        <h2 class="display-6 mt-2">Send an enquiry</h2>
+        <div class="divider-brass mt-3 mb-3"></div>
+        <p style="color:#4b4d46;">Describe the unit and what's needed — new establishment, a specific licence, or an upcoming audit — and it goes straight to Mohit's inbox.</p>
+
+        <div class="d-flex flex-wrap gap-3 mb-4">
+          <a class="btn btn-outline-dark rounded-1" href="tel:+919461318171" style="border-color:var(--line);"><i class="fa-solid fa-phone me-2"></i>Call +91 94613-18171</a>
+          <a class="btn btn-outline-dark rounded-1" href="https://wa.me/919461318171" target="_blank" rel="noopener" style="border-color:var(--line);"><i class="fa-brands fa-whatsapp me-2"></i>Message on WhatsApp</a>
+        </div>
+
+        <div class="d-flex align-items-start gap-3 py-3 border-top" style="border-color:var(--line)!important;">
+          <span class="rounded-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width:36px;height:36px;background:var(--deep);color:var(--brass-light);"><i class="fa-solid fa-phone"></i></span>
+          <div><p class="mb-0" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:#5a5c53;">TELE-CHANNELS</p><a href="tel:+919461318171" class="d-block fw-medium link-shine">+91 94613-18171</a><a href="tel:+918949056368" class="d-block fw-medium link-shine">+91 89490-56368</a></div>
+        </div>
+        <div class="d-flex align-items-start gap-3 py-3 border-top" style="border-color:var(--line)!important;">
+          <span class="rounded-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width:36px;height:36px;background:var(--deep);color:var(--brass-light);"><i class="fa-solid fa-envelope"></i></span>
+          <div><p class="mb-0" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:#5a5c53;">EMAIL</p><a href="mailto:compliancemohit@outlook.com" class="d-block fw-medium link-shine">compliancemohit@outlook.com</a><a href="mailto:mohitshrimali18@consultant.com" class="d-block fw-medium link-shine">mohitshrimali18@consultant.com</a></div>
+        </div>
+        <div class="d-flex align-items-start gap-3 py-3 border-top" style="border-color:var(--line)!important;">
+          <span class="rounded-2 d-flex align-items-center justify-content-center flex-shrink-0" style="width:36px;height:36px;background:var(--deep);color:var(--brass-light);"><i class="fa-solid fa-globe"></i></span>
+          <div><p class="mb-0" style="font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.05em;color:#5a5c53;">WEB</p><a href="http://www.osscs.com" target="_blank" rel="noopener" class="d-block fw-medium link-shine">www.osscs.com</a></div>
+        </div>
+      </div>
+
+      <div class="col-lg-7" data-aos="fade-left">
+        <form class="bg-white border rounded-3 p-4 p-md-5" id="inquiryForm" style="border-color:var(--line)!important;">
+          <input type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;">
+          <div class="row g-3">
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold" for="name">Name</label>
+              <input type="text" class="form-control" id="name" name="name" required placeholder="Your name">
+            </div>
+            <div class="col-md-6">
+              <label class="form-label small fw-semibold" for="phone">Phone</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required placeholder="+91 XXXXX XXXXX">
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold" for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" required placeholder="you@company.com">
+            </div>
+            <div class="col-12">
+              <label class="form-label small fw-semibold" for="message">What do you need?</label>
+              <textarea class="form-control" id="message" name="message" rows="4" required placeholder="e.g. New factory establishment in Jodhpur, need RSPCB CTE/CTO plus Fire NOC."></textarea>
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn-brass w-100 py-3 rounded-1" id="submitBtn">Send enquiry</button>
+              <p class="small mt-2 mb-0" style="color:#5a5c53;">Enquiries are sent directly by email — see the setup note below the form for the one-time activation step.</p>
+              <div class="alert mt-3 d-none" id="formStatus" role="alert"></div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="py-4">
+  <div class="container d-flex flex-wrap justify-content-between gap-2" style="font-size:12.5px;">
+    <span>© 2026 Om Shree Sai Compliance Solution (OSSCS). All rights reserved.</span>
+    <span>Jodhpur, Rajasthan, India</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>AOS.init({ once:true, duration:700, easing:'ease-out-cubic' });</script>
+
+<script>
+  const certModal = document.getElementById('certModal');
+  certModal.addEventListener('show.bs.modal', function (event) {
+    const trigger = event.relatedTarget;
+    document.getElementById('certModalName').textContent = trigger.getAttribute('data-name');
+    document.getElementById('certModalDesc').textContent = trigger.getAttribute('data-desc');
+    document.getElementById('certModalImg').src = trigger.getAttribute('data-img');
+    document.getElementById('certModalImg').alt = trigger.getAttribute('data-name');
+  });
+
+  // Contact form -> Web3Forms (free email delivery, no server needed)
+  // Replace YOUR_ACCESS_KEY_HERE with the key from https://web3forms.com
+  const ACCESS_KEY = "YOUR_ACCESS_KEY_HERE";
+
+  const form = document.getElementById('inquiryForm');
+  const status = document.getElementById('formStatus');
+  const submitBtn = document.getElementById('submitBtn');
+
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    if (ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+      status.className = "alert alert-warning mt-3";
+      status.textContent = "Form isn't connected yet — add your Web3Forms access key in the code (see setup note).";
+      return;
+    }
+
+    const formData = new FormData(form);
+    formData.append("access_key", ACCESS_KEY);
+    formData.append("subject", "New enquiry from OSSCS website");
+    formData.append("from_name", "OSSCS Website");
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = "Sending...";
+
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Accept": "application/json" },
+        body: formData
+      });
+      const result = await res.json();
+
+      if (result.success) {
+        status.className = "alert alert-success mt-3";
+        status.textContent = "Thanks — your enquiry has been sent. Expect a reply soon.";
+        form.reset();
+      } else {
+        status.className = "alert alert-danger mt-3";
+        status.textContent = "Something went wrong sending that. Please try the phone or email options instead.";
+      }
+    } catch (err) {
+      status.className = "alert alert-danger mt-3";
+      status.textContent = "Network error — please try again, or reach out by phone/email.";
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.textContent = "Send enquiry";
+    }
+  });
+</script>
+</body>
+</html>
